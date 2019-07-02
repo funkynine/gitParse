@@ -1,0 +1,15 @@
+<div class="container">
+    <form class="form-inline form-m">
+        <input type="text" placeholder="example: facebook" name="input1" class="form-control form-control-lg" [(ngModel)]="userName">
+        <button (click)="answer()" class="btn btn-dark" type="submit">Search</button>
+    </form>
+    
+
+    <div *ngIf="response" class="dataGit">
+        <img src="{{ response.avatar_url }}" alt="photo">
+        <p>Name: {{ response.name }}</p>
+        <p>Bio: {{ response.bio }}</p>
+        <p>Location: {{ response.location }}</p>
+        <p>Created Account: {{ response.created_at }}</p>
+    </div>
+</div>
